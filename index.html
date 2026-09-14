@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Bappa's Test - Press Under Pressure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Tiro+Devanagari+Hindi:wght@400;600&family=Nunito:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="temple-bg" aria-hidden="true">
+      <div class="lotus lotus-a"></div>
+      <div class="lotus lotus-b"></div>
+      <div class="sparkles"></div>
+    </div>
+
+    <main id="app">
+      <section class="screen active" id="screen-title">
+        <p class="mantra">गणपती बाप्पा मोरया</p>
+        <div class="title-idol" id="title-idol"></div>
+        <h1>Bappa's Test</h1>
+        <p class="subtitle">A press-under-pressure devotion.<br />One button. Many tricks. Read before you tap.</p>
+        <button class="gold-btn" id="btn-begin" type="button">Begin darshan</button>
+        <p class="hint">Wrong press ends the attempt. Survive 20 trials for Bappa's blessing.</p>
+      </section>
+
+      <section class="screen" id="screen-play">
+        <header class="hud">
+          <span id="hud-set">Set 1</span>
+          <span id="hud-trial">Trial 1 / 20</span>
+          <span id="hud-lives">♥ devotion</span>
+        </header>
+        <p class="instruction" id="instruction"></p>
+        <div class="visual-stage" id="visual"></div>
+        <div class="button-wrap" id="button-wrap">
+          <svg class="timer-ring" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="timer-track" cx="60" cy="60" r="54" />
+            <circle class="timer-fill" id="timer-fill" cx="60" cy="60" r="54" />
+          </svg>
+          <button class="press-btn" id="press-btn" type="button" aria-label="Press">PRESS</button>
+        </div>
+        <p class="tiny-hint" id="tiny-hint"></p>
+      </section>
+
+      <section class="screen" id="screen-fail">
+        <p class="mantra">ध्यान से, बाप्पा</p>
+        <h2>The puja was interrupted</h2>
+        <p class="fail-reason" id="fail-reason"></p>
+        <button class="gold-btn" id="btn-retry" type="button">Try the next path</button>
+        <p class="hint">Each failure opens a new set of 20 trials.</p>
+      </section>
+
+      <section class="screen" id="screen-win">
+        <p class="mantra">गणपती बाप्पा मोरया</p>
+        <div class="win-idol" id="win-idol"></div>
+        <h2 id="win-title">You have received Bappa's blessing!</h2>
+        <p class="subtitle" id="win-text">The pandal glows. Petals fall. Your devotion held under pressure.</p>
+        <button class="gold-btn" id="btn-again" type="button">Offer another aarti</button>
+      </section>
+    </main>
+
+    <script src="trials.js"></script>
+    <script src="visuals.js"></script>
+    <script src="audio.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
